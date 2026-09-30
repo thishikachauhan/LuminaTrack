@@ -1,0 +1,128 @@
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    transition: 0.3s;
+}
+
+/* DARK THEME */
+
+body.dark-theme {
+    background-color: #0f172a;
+    color: white;
+}
+
+body.dark-theme .main-content {
+    background-color: #0f172a;
+    color: white;
+}
+
+body.dark-theme #head_section {
+    background-color: #0f172a;
+    color: white;
+}
+
+body.dark-theme #layout {
+    background-color: #1e293b;
+    color: white;
+}
+
+body.dark-theme .kpi-card {
+    background-color: #1e293b;
+    color: white;
+}
+
+body.dark-theme .table-section {
+    background-color: #1e293b;
+    color: white;
+}
+
+body.dark-theme .data-table {
+    background-color: #1e293b;
+    color: white;
+}
+
+body.dark-theme .data-table th,
+body.dark-theme .data-table td {
+    color: white;
+}
+
+/* body.dark-theme .data-table tbody tr:hover td {
+    color: #0f172a !important;
+} */
+
+body.dark-theme  .breadcrumb-item{
+    color:white;
+}
+
+body.dark-theme .kpi-card {
+    color: #ffffff;
+}
+
+body.dark-theme .kpi-title {
+    color: #cbd5e1;
+}
+
+body.dark-theme .kpi-value {
+    color: #ffffff;
+}
+
+body.dark-theme .trend-up {
+    color: #10b981;
+}
+
+body.dark-theme .trend-down {
+    color: #ef4444;
+}
+
+body.dark-theme .dealer-name {
+    color: beige;
+}
+
+body.dark-theme .dealer-location {
+    color: beige;
+}
+
+
+body.dark-theme h2 {
+    color: beige;
+}
+
+body.dark-theme .data-table tbody tr:hover {
+    background-color: #f8fafc;
+    color: black;
+}
+
+body.dark-theme .data-table tbody tr:hover td {
+    color: black !important;
+}
+
+/* body.dark-theme .data-table tbody td:hover {
+    background-color: #f8fafc;
+} */
+
+body.dark-theme .data-table tbody td:hover td {
+    color: #0f172a !important;
+}
+
+
+body.dark-theme .btn.btn-dark {
+    background-color: #0f172a !important;
+}
+
+
+body.dark-theme .btn.btn-dark .menu-icon {
+    color: white !important;
+}
+
+body.dark-theme .sidebar{
+    background-color:#0f172a !important ;
+}
+
+body.dark-theme .offcanvas-title{
+    color:#ffffff  !important;
+}
+
+body.dark-theme .offcanvas-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+

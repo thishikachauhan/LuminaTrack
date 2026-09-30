@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LuminaTrack </title>
+    <link rel="icon" type="image/x-icon" href="../real pic for project.png"/>
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <link rel="stylesheet" href="../CSS/sidebar.css"/>
+    <link rel="stylesheet" href="../CSS/theme.css"/>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-icons.min.css">
+    
+</head>
+
+
+<body class="theme_container">
+
+    <div class="app-layout">
+        <!-- Sidebar gets injected here automatically -->
+        <div id="sidebar-content">
+
+            <!-- Button to toggle the menu (Place this in your navbar or header) -->
+            <button class="btn btn-dark btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu"
+            style="background-color:#F5F5F5 ">
+                <span class="menu-icon" style="color:black ">☰</span> 
+            </button>
+
+            <!-- Bootstrap Left-to-Right Offcanvas Container -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel"
+            style="width:270px ; overflow-y: hidden; border-radius: 10px">
+                
+                <!-- Offcanvas Header with Close Button -->
+                
+
+                <!-- Offcanvas Body containing your original sidebar structure -->
+                <div class="offcanvas-body p-0"> 
+                    <div id="sidebar-container" class="h-100">
+                        <aside class="h-100">
+                            <div class="sidebar h-100">
+
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="sidebarMenuLabel" style="color:#D75656">Navigation</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+
+                                <nav class="sidebar-nav d-flex flex-column">
+                                    <a href="dashboard.html" class="nav-link active py-3 px-4 text-decoration-none">
+                                        <span class="icon me-2">📊</span> Dashboard
+                                    </a>
+                                    <a href="inventory.html" class="nav-link active py-3 px-4 text-decoration-none">
+                                        <span class="icon me-2">📦</span> Inventory
+                                    </a>
+                                    <a href="dealers.html" class="nav-link active py-3 px-4 text-decoration-none">
+                                        <span class="icon me-2">🤝</span> Dealers
+                                    </a>
+                                    <a href="orders.html" class="nav-link active py-3 px-4 text-decoration-none">
+                                        <span class="icon me-2">🧾</span> Sales Orders
+                                    </a>
+                                </nav>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="main-content" style="padding:0px; overflow-x: hidden; overflow-y: hidden;">
+            
+            <!--header layout-->
+            <!--Logo-->
+            <!-- <header class=""> -->
+                <div class="row" id="head_section">
+                
+                    <div class="col-md-8">
+                        <div class="d-flex align-items-center">
+                            
+                            <img src="../cropped real pic for project.png" />
+                            <h1 style="margin-left:15px;">Lumina Track</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2 mt-2" >
+                            <div class="avatar" style="width:200px">
+                                 <span id="loggedUSer"></span>
+                                </div>
+                    </div>
+                        <div class="col-md-1" style="display:flex; gap:30px">
+                        <div>
+                            <button id="themeToggle" type="button" class="btn btn-light">Change Theme</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-light"><a href="codepen.html">Logout</a></button>
+                        </div>
+                        </div>
+                        
+                    </div>
+                
+              <!-- </header>  -->
+            <!--login profile and greetings-->
+
+
+<!--header layout-->
+<!--bread crumb for open page-->
+            <div class="card mb-3" id="layout">
+                
+                <div class="top_bar">
+
+                    <div class="left_section">
+                        <!-- <button id="menuBtn" class="menu-btn">
+                                ☰
+                        </button> -->
+                        <nav aria-label="breadcrumb" style="display: flex; justify-content: space-between;">
+                            <ol class="breadcrumb">
+                                <a href="codepen.html" id="home_page"><li class="breadcrumb-item">Home </li></a>
+                                <li class="breadcrumb-item active" aria-current="page">   📈 Dashboard Overview    </li>
+                            </ol>
+                            <div class="date-display" id="currentDate">loading date...</div>
+                        </nav>
+                        </div>
+                </div>
+            </div>
+
+            <div class="search_section">
+                    <input
+                    type="text"
+                    id="searchinput"
+                    class="search_input" style="height: 32px; width: 230px;"
+                    placeholder="🔍 search orders by Order Id...."
+                    />
+            </div>
+            <!-- KPI Cards Grid -->
+            <div class="kpi-grid">
+                <!-- Card 1: Revenue -->
+                <div class="kpi-card revenue">
+                    <div class="kpi-title">Total Revenue</div>
+                    <div class="kpi-value">₹ 2,45,000</div>
+                    <div class="kpi-trend trend-up">▲ 12% from last month</div>
+                </div>
+
+                <!-- Card 2: Orders -->
+                <div class="kpi-card orders">
+                    <div class="kpi-title">Total Orders</div>
+                    <div class="kpi-value">48</div>
+                    <div class="kpi-trend trend-up">▲ 5 new today</div>
+                </div>
+
+                <!-- Card 3: Low Stock Alerts -->
+                <div class="kpi-card stock">
+                    <div class="kpi-title">Low Stock Alerts</div>
+                    <div class="kpi-value">3</div>
+                    <div class="kpi-trend trend-down">▼ Needs attention</div>
+                </div>
+
+                <!-- Card 4: Pending Payments -->
+                <div class="kpi-card pending">
+                    <div class="kpi-title">Pending Payments</div>
+                    <div class="kpi-value">₹ 85,500</div>
+                    <div class="kpi-trend trend-down">▼ 4 invoices overdue</div>
+                </div>
+            </div>
+
+            <!-- Recent Orders Table -->
+            <div class="table-section">
+                <div class="table-header">
+                    <h2>Recent Sales Orders</h2>
+                    <a href="orders.html" class="view-all-btn view-only">View All the Info of Orders →</a>
+                </div>
+                
+                <div class="table-data-scroll">
+                <table class="data-table">
+                    <thead>
+                        <!-- <tr> -->
+                            <th>Order ID</th>
+                            <th>Dealer Name</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        <!-- </tr> -->
+                    </thead>
+                    <tbody id="mapDashboardTableData">
+                        <!-- <tr>
+                            <td>#ORD-1042</td>
+                            <td>Sunrise Solar Pvt Ltd</td>
+                            <td>24 Jul 2026</td>
+                            <td>₹ 45,000</td>
+                            <td><span class="status-badge status-paid">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-1041</td>
+                            <td>Green Energy Solutions</td>
+                            <td>23 Jul 2026</td>
+                            <td>₹ 1,20,000</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-1040</td>
+                            <td>EcoVolt Distributors</td>
+                            <td>22 Jul 2026</td>
+                            <td>₹ 32,500</td>
+                            <td><span class="status-badge status-paid">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-1039</td>
+                            <td>Rays & Rays Electronics</td>
+                            <td>21 Jul 2026</td>
+                            <td>₹ 88,000</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+              </div>  
+            </div>
+
+        </main>
+    </div>
+    <!-- <p id="setApiResponse"></p> -->
+
+    <script src="../JS/session.js"></script>
+    <script src="../JS/theme.js"></script>
+    <script src="../JS/dashboard.js"></script>
+    <script src="../bootstrap.bundle.min.js"></script>
+    <script src="../sweetalert2@11.js"></script>
+    <script src="../JS/roles.js"></script>
+</body>
+
+<script>
+    const fetchLoggedInUser = sessionStorage.getItem("loggedUser");
+    document.getElementById("loggedUSer").innerHTML = `hello!! ${fetchLoggedInUser}`;
+</script>
+    
+</html>

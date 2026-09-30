@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuminaTrack</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+    
+    <link rel="stylesheet" href="../CSS/bootstrap.min CSS.css">
+    <script src="bootstrap.bundle.min - Copy.js"></script>
+    <script src="sweetalert2@11.js"></script>
+</head>
+
+<body>
+
+    <!-- login page   -->
+    <div class="login-container">
+        <form id="loginForm">
+            <div class="mb-4">
+                <label for="exampleInputUser" class="form-label">User Id <span class="mandatFields">*</span></label>
+                <input type="text" class="form-control" id="exampleInputUser" required maxlength="20" required>
+            </div>
+            <div class="mb-4">
+                <label for="exampleInputPassword1" class="form-label">Password <span class="mandatFields">*</span></label>
+                <input type="password" class="form-control" id="exampleInputPassword1" required>
+            </div>
+            <div class="mb-4 form-check">
+                <label class="form-check-label" for="exampleCheck1">Forget password?</label>
+            </div>
+            <button type="button" class="btn btn-primary" id="btn1" onclick="checkEmptyyFieldValidation()">Log
+                in</button>
+            <div class="no-account">
+                <p>don't have any account</p>
+                <a href="signin.html" class="new-acc"> create new account </a>
+                <p>or</p><a href="signin.html" class="sign">signin</a>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+<script>
+
+
+//Restrcit user to type special characters - regex validations for input fields 
+    const userRegex = /[^a-zA-Z0-9]/g; //regex logic 
+    const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    //taking all the values from the form
+
+    // let form = document.getElementById("loginForm");
+
+    let user = document.getElementById("exampleInputUser");
+    let pass = document.getElementById("exampleInputPassword1");
+
+    user.addEventListener('input', function () {
+        if (userRegex.test(this.value)) {
+            this.value = this.value.replace(userRegex, "");
+        }
+        
+    });
+//    pass.addEventListener('input', function () {
+//         if (passRegex.test(this.value)) {
+//             this.value = this.value.replace(passRegex, "");
+//         }
+        
+//     });
+
+// document.querySelector("#exampleInputUser").addEventListener('input', )
+// document.getElementById("password").style.display = "block";
+
+
+    function checkEmptyyFieldValidation() {
+        
+        let user = document.getElementById("exampleInputUser").value;
+        let pass = document.getElementById("exampleInputPassword1").value;
+       
+        // if (!user || !pass) {
+        //     DisplayMessage("Please fill in required fields.");
+        // }
+        if (!user) {
+            DisplayMessage("Please fill in User ID.");
+            return;
+        }
+
+        if (!pass) {
+            DisplayMessage("Please fill in Password.");
+             return;
+        }
+        Swal.fire({
+            title: "Form Submitted Successfully!!!",
+            icon: "success",
+        }).then(()=>{
+            alert("");
+        });
+    }
+
+ //  const obj = {
+        //     userName: user,
+        //     Email: email,
+        //     Password: pass
+        // }
+        const objArray = [
+            {name:"userId", value: user},
+            {name:"Password", value: pass}
+        ]
+        console.log(objArray[0]);
+        console.log(objArray[1]);
+
+        if(user==pass){
+            console.log("you can  proceed for the further access")
+        }
+        else{
+            console.log("user Id and password are not same. Please enter correct information for proceeding further")
+        }
+
+        //array of ibject for validation while login 
+        const validateLoginFields = [
+        {id: "T2003", password: "Thishika@123456"},
+        {id: "T2001", password: "Tanya@123456"},
+        ];
+
+
+// for (const fields of validateLoginFields) {
+//     if(fuserid === fields.id && pass === fields.password){
+//         alert("logged in successfully");
+//     }
+//  //first match
+//     validateLoginFields.find(function(items){
+//         return fuserid === fields.id && pass === fields.password;
+//     })
+// }
+
+//string operations
+const name = "Thishika";
+console.log(name.length);
+
+console.log(name.toUppercase);
+console.log(name.toLowercase);
+
+// //substring 
+//  substring("firstIndex", "endindex");
+// const substringname = substring(0, 5);
+
+//replace
+// Thishika is an intern. Thishika 
+// replace("Thishika", "Tanya");
+// replace("\Thishika\g", "tanya");
+
+// indexOf("thishika")
+
+    //validation popup 
+
+    function DisplayMessage(msg) {
+        alert(msg);
+    }
+
+    // setInterval(() => {
+    //     alert("helloo2");
+    // }, 1000);
+
+     setTimeout(() => {
+        alert("hello");
+    }, 3000);
+
+
+
+    //array properties
+
+        const a = ["1", "2", "3"];
+        const b = ["hello", "1", "2", "3", "jello1"]
+        //add an element in to an array 
+        //push - element add at the enmd of an array
+        //push unshift 
+        //unshift - adda an element at first 
+        a.push("hello1")
+        a.unshift("hello")
+        splice(imdex)
+        a.splice(1, 2); replace 
+        a.splice(1,0, "2"); 
+        a = ["3"]
+
+        //remove anelemnent from an array 
+        pop, shift 
+        a.pop("")  
+
+        a.concat(b) 
+        a.length = 6
+        a = ["1", "2", "3", null, null, null];
+        
+
+        //map --- return value get store in a new array 
+        const obj = [{
+            id: "1", name: "tanya",
+            id: "2", name: "tanya SInggh",
+
+        }];
+
+        obj.map((i)=>{
+        
+            i.name;
+        });
+
+        //filter possible matches 
+        obj.filter(user=> user.name .includes("Tanya"))
+         obj.find(user=> user.name .includes("Tanya"))
+    
+//include - first match 
+// a.includes("tanya")
+//  bool return 
+
+//sort 
+const numbers= [1,2,3];
+numbers.sort(); //alphabetically 
+
+numbers,sort(startingvalue, endvalue){
+    return startingvalue - endvalue; // acscending s,mall to high  // asc 
+}
+numbers.sort((startingvalue, endvalue)=> endvalue - startingvalue); //desc 
+//date 
+//Date date = new  Date();
+Date.now();
+
+
+//local storage - 5-10 mb
+
+//    localStorage.setItem('userid', 'tanya');
+//     localStorage.getItem("userid");
+localStorage.setItem('theme', 'dark'); // create - update
+    console.log(localStorage.getItem("userid"));
+    localStorage.removeItem('userid');
+    localStorage.clear();
+
+    Create / Update: localStorage.setItem('key', 'value');
+    Read: let data = localStorage.getItem('key');
+    Delete Specific Item: localStorage.removeItem('key');
+    Clear All Data: localStorage.clear();
+
+//session - 5 mb               
+
+    sessionStorage.setItem('key', 'value');
+    sessionStorage.getItem('key');
+
+    Create / Update: sessionStorage.setItem('key', 'value');
+    Read: let data = sessionStorage.getItem('key');
+    Delete Specific Item: sessionStorage.removeItem('key');
+    Clear All Data: sessionStorage.clear();
+
+    
+//cookie- 4kb
+//works on utc- coordinated universal time
+document.cookie = "username=JohnDoe,password= 12344656; expires=Sat, 08 Aug 2026 12:00:00 UTC; path=/";
+Read: let allCookies = document.cookie; 
+
+
+
+
+<script>
+        //JSON - JS  OBJECT NOTATION - TEXT STRUCTURE/ FORMAT USED TO DATA STORED AND TO EXCHANGE DATA 
+        //{
+        //     "id" : 67896,
+        //     "name" : "tanya"
+        // }
+
+    //     stringify =  js object -> json 
+    //     parse = json  - string 
+    // //     JSON.parse( )
+    //     JSON.stringify() - {"id" = 6799, } 
+
+    //API - used to interact wid server or backend = interfacse between frontend adn backend 
+    
+    //HTTP METHODS = GET ,POST ,, PUT , DELETE , PATCH(Partial Update)
+
+//API GET METHODS FOR FETCHING THE DATA
+
+    //fetch  - GET 
+//1st syntax 
+   fetch('https://fakestoreapi.com/products') // path 
+  .then(response => response.json())
+  .then(data => console.log(data));
+//   .catch(alert("error "));
+
+//exception handlers - try catch (ex)
+
+//2nd method
+async function getRecentSalesOrder() {
+  try {
+    const response = await fetch("https://mocki.io/v1/e9c31009-d021-4536-ab05-2cbd3e87157d");
+    
+    const data = await response.json();
+    // array.forEach(element => {
+        
+    // });
+    console.log(data.title);
+    document.getElementById("setApiResponse").textContent = data.title;
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+  }
+}
+
+// Call the function to test it
+getRecentSalesOrder();
+
+//. async await  -  
+async function getRecentSalesOrder1(){
+
+   const respobse =  await fetch("");
+    response  = respobse.json;
+    
+
+}
+
+console.log(data.title);
+ document.getElementById("setApiResponse").textContent = data.title;
+
+    </script>
+//In this we make the array of objects
+
+
+    // making array of objects
+     const invent_obj= [
+        {Product_Name:"Goodwe 5kW Hybrid Inverter", Category:"Inverter", Price:"₹ 85,000"},
+        {Product_Name:"Tata Solar 450W Mono PERC Panel", Category:"Solar Panel", Price:"₹ 12,500"},
+        {Product_Name:"Luminous 150Ah Tubular Battery", Category:"Battery", Price:"₹ 18,000"},
+        {Product_Name:"Havells 10kW Solar PCU", Category:"Inverter", Price:"₹ 1,10,000"}
+     ]    
+     
+     //mapping objects
+
+
+
+     //localstorage of user id and password
+
+localStorage.setItem('userid1','thishika');  //in key value pairs
+localStorage.setItem('password1','123456');
+localStorage.setItem('userid2','nidhi');
+localStorage.setItem('password2','987654');
+
+const user_id1 = localStorage.getItem('userid1');
+const user_pass1 = localStorage.getItem('password1');
+const user_id2 = localStorage.getItem('userid2');
+const user_pass2 = localStorage.getItem('password2');
+
+console.log(user_id1);
+console.log(user_pass1);
+console.log(user_id2);
+console.log(user_pass2);
+
+    
+</script>
+
+//jwt- json web token (It is a token used to prove that a user is authenticated.)
+
+//Bearer (authentication scheme): I am sending an authentication token, and whoever possesses (bears) this token is authorized."
+
+//Authorization: {"Authorization": `Bearer ${token}`}
+//Authentication = Who are you?
+//Authorization = What are you allowed to do?
+
+
+ //get api 
+//POST API METHODS TO INSERT AND UPDATE DATA 
+    //post - api
+    //TOKEN : USED TO AUTHENTICate the identity of the user 
+
+
+    // headers:{
+    //     "authroization" : "Bearer ksjfbSURESUYGUJ",
+    //     "CONTENT-TYPE": "APPLICATION/JSON",
+    //     "mode": "same-origin" "no-cors"
+
+const forms = document.getElementById("");
+
+const formsss = {
+    name: "Thishika",
+    password: "3824687wy"
+}
+
+//FormData IS INBUILT FUNCTION TO STORE ALL THE DATA OF THE FORM ELEMENT 
+
+const formData = new FormData(formsss);
+
+  fetch('https://dummyjson.com/posts/add', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: formData
+//    JSON.stringify({
+//     title: 'I am in love with someone.',
+//     userId: 5,
+//     /* other post data */
+//   })
+})
+.then(res => res.json())
+.then(console.log);
+
+
+  async function getRecentSalesOrder() {
+  try {
+    const response = await fetch("https://mocki.io/v1/e9c31009-d021-4536-ab05-2cbd3e87157d", {
+         method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: formData
+    });
+    
+    const data = await response.json();
+    // array.forEach(element => {
+        
+    // });
+    console.log(data.title);
+    document.getElementById("setApiResponse").textContent = data.title;
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+  }
+}
+
+
+//QUERY PARAMTERS
+const baseUrl = 'https://example.com';
+
+// 1. Define your dynamic parameters as an object
+const params = {
+  userId: '123',
+  source: 'web app', // Notice the space; it will be safely encoded to 'web%20app'
+  draft: 'true'
+};
+
+// 2. Convert object to a query string
+const queryString = new URLSearchParams(params).toString(); 
+// Result: "userId=123&source=web+app&draft=true"
+
+// 3. Combine them together
+const fullUrl = `https://example.com?${queryString}`;
+
+fetch(fullUrl, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ title: 'Dynamic Example' })
+});
+
+
+
+
+</html>

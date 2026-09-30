@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LuminaTrack </title>
+    <link rel="icon" type="image/x-icon" href="../real pic for project.png" />
+    <link rel="stylesheet" href="../CSS/codepen_signin.css" />
+    <link rel="stylesheet" href="../bootstrap.min.css">
+
+    
+</head>
+
+<body>
+    <div class="page">
+        <div class="background-shape shape-1"></div>
+        <div class="background-shape shape-2"></div>
+
+        <div class="signin-card">
+            <div class="card-header">
+                <h1>Join Us Today!!</h1>
+                <p>Create your account to get started. ⭐</p>
+            </div>
+
+            <form class="signin-form">
+
+                <div class="input-group">
+                    <label for="userName">User name  <span >*</span></label>
+                    <div class="input-wrapper">
+                        <span class="input-icon" id="inputPen">🖍</span>
+                        <input type="text" id="userName" name="userName" placeholder="Enter User Name"
+                            autocomplete="userName" required />
+                    </div>
+
+
+                </div>
+
+
+                <div class="input-group">
+                    <label for="password1"> Create Password <span >*</span></label>
+                    <div class="input-wrapper">
+                        <span class="input-icon" id="lock">🔒</span>
+                        <input type="password" id="password1" name="password" placeholder="Enter your password"
+                            autocomplete="current-password" required />
+                        <button class="toggle-password" id="togglePassword1" type="button" data-target="password1"
+                            aria-label="Afficher ou masquer le mot de passe">
+                            Show
+                        </button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password2"> Confirm Password <span >*</span></label>
+                    <div class="input-wrapper">
+                        <span class="input-icon" >🔒</span>
+                        <input type="password" id="password2" name="password" placeholder="Confirm your password"
+                            autocomplete="current-password" required />
+                        <button class="toggle-password" id="togglePassword2" type="button" data-target="password2"
+                            aria-label="Afficher ou masquer le mot de passe">
+                            Show
+                        </button>
+                        <!-- Inside codepen_signin.html -->
+                    </div>
+                </div>
+
+                <p class="login-link">
+                    Already have an account? <a href="codepen.html">Log in</a>
+                </p>
+
+
+
+
+
+                <a class="submit-btn" type="submit">Create Account</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="../JS/codepen_signin.js"></script>
+    <script src="../bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

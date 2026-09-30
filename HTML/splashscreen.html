@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LuminaTrack </title>
+    <link rel="icon" type="image/x-icon" href="../real pic for project.png"/>
+    <link rel="stylesheet" href="../CSS/splashscreen.css">
+    
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <script src="../bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- The Splash Screen Container -->
+    <div class="splash-screen">
+        <div class="splash-content">
+            
+            <!-- The Logo (SVG) -->
+            <div class="logo-box">
+                <svg width="60" height="60" viewBox="0 0 40 40" fill="none">
+                    <!-- Deep Blue Base -->
+                    <path d="M0 40 L0 0 L12 0 L12 28 L28 28 L28 40 H0 Z" fill="#FFFFFF"/>
+                    <!-- Solar Orange Accents -->
+                    <path d="M16 24 L28 24 L28 12 L16 24 Z" fill="#F59E0B"/>
+                    <path d="M32 8 L40 8 L24 24 L16 24 L32 8 Z" fill="#F59E0B"/>
+                </svg>
+            </div>
+
+            <!-- Brand Name -->
+            <h1 class="brand-name">Lumina<span class="highlight">track</span></h1>
+            
+            <!-- Tagline -->
+            <p class="tagline">Solar Distribution Intelligence</p>
+
+            <!-- Loading Bar -->
+            <div class="loading-container">
+                <div class="loading-bar"></div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script>
+    // Wait for the page to fully load
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // Set a timer for 3000 milliseconds (3 seconds)
+    setTimeout(() => {
+        
+        // Redirect to the login page
+        // Make sure your login page is named 'login.html'
+        window.location.href = "codepen.html"; 
+        
+    }, 3000); 
+    
+});
+</script>
+</html>

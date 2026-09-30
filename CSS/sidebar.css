@@ -1,0 +1,182 @@
+/* --- LAYOUT & SIDEBAR STYLES --- */
+
+/* The main wrapper that holds sidebar and content side-by-side */
+.app-layout {
+    display: flex;
+    height: 100vh;
+    background-color: #F8FAFC; /* Light gray background for main content */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 260px;
+    height:310px;
+    background-color: #F5F5F5; /* Deep Blue */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    border-radius: 0 10px 10px 0;
+    margin-left: 5px;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #1E293B;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.highlight {
+    color: #F59E0B; /* Solar Orange */
+}
+
+/* Navigation Links */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+    margin-top: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #94A3B8;
+    padding: 12px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.nav-link:hover {
+    background-color: #1E293B;
+    color: rgb(15, 14, 14) !important;
+}
+
+/* The active page gets the orange highlight */
+.nav-link.active {
+    background-color: #DFF1F1;
+    color: #464858;
+    font-weight: 600;
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+/* Footer / User Profile */
+.sidebar-footer {
+    border-top: 1px solid #1E293B;
+    padding-top: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #F59E0B;
+    color: #0F172A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.user-role {
+    font-size: 0.75rem;
+    color: #94A3B8;
+}
+
+.logout-btn {
+    text-decoration: none;
+    color: #EF4444; /* Red for logout */
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logout-btn:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Area (Where your dashboard will go) */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* =========================================
+   SIDEBAR TOGGLE STYLES
+   ========================================= */
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    z-index: 1001;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background: #F59E0B;
+    border-color: #F59E0B;
+}
+
+.menu-toggle:hover span {
+    background: white;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #0F172A;
+    transition: all 0.3s ease;
+}
+

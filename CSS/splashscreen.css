@@ -1,0 +1,91 @@
+/* Reset basic margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.22), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.22), transparent 28%),
+    linear-gradient(135deg, #0f172a 0%, #111827 45%, #020617 100%);
+  color: #f8fafc;
+}
+
+/* Full screen dark background */
+.splash-screen {
+    height: 100vh;
+    width: 100%;
+    background-color: #0F172A; /* Deep Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.splash-content {
+    text-align: center;
+    color: white;
+    /* Fade in animation */
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Logo styling and glow animation */
+.logo-box {
+    margin-bottom: 20px;
+    animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.2)); transform: scale(1); }
+    100% { filter: drop-shadow(0 0 20px rgba(245, 158, 11, 0.6)); transform: scale(1.05); }
+}
+
+/* Typography */
+.brand-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.highlight {
+    color: #F59E0B; /* Solar Orange */
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #94A3B8; /* Light Gray */
+    margin-bottom: 40px;
+}
+
+/* Loading Bar styling */
+.loading-container {
+    width: 200px;
+    height: 4px;
+    background-color: #1E293B;
+    border-radius: 2px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.loading-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #F59E0B;
+    /* Fills up over 2.8 seconds */
+    animation: loadProgress 2.8s ease-in-out forwards;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes loadProgress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
